@@ -64,10 +64,12 @@ local plugins = {
 	{
 		"glepnir/lspsaga.nvim",
 		branch = "main",
+		event = "LspAttach",
 		config = function()
-			require("custom.configs.lspsaga").setup()
+			require("custom.configs.lspsaga")
 		end,
 	},
+
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",

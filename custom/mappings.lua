@@ -39,6 +39,8 @@ M.lspconfig = {
 
 		["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "lsp declaration" },
 
+		["gt"] = { "<cmd>Lspsaga goto_definition<CR>", "lsp declaration" },
+
 		["<leader>ca"] = { "<cmd>Lspsaga code_action<CR>", "lsp code actions" },
 
 		["<leader>rn"] = { "<cmd>Lspsaga rename<CR>", "lsp rename" },
@@ -52,8 +54,6 @@ M.lspconfig = {
 		["]d"] = { "<cmd>Lspsaga diagnostic_jump_next<CR>", "lsp goto next" },
 
 		["K"] = { "<cmd>Lspsaga hover_doc<CR>", "lsp hover" },
-
-		["<leader>o"] = { "<cmd>LSoutlineToggle<CR>", "lsp outline on right side" },
 	},
 }
 

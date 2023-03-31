@@ -1,17 +1,30 @@
 local present, lspsaga = pcall(require, "lspsaga")
 if not present then
-  return
+	return
 end
 
 lspsaga.setup({
-  -- keybinds for navigation in lspsaga window
-  move_in_saga = { prev = "<C-k>", next = "<C-j>" },
-  -- use enter to open file with finder
-  finder_action_keys = {
-    open = "<CR>",
-  },
-  -- use enter to open file with definition preview
-  definition_action_keys = {
-    edit = "<CR>",
-  },
+	finder = {
+		max_height = 0.5,
+		min_width = 30,
+		force_max_height = false,
+		keys = {
+			jump_to = "p",
+			expand_or_jump = "<CR>",
+			vsplit = "s",
+			split = "i",
+			tabe = "t",
+			tabnew = "r",
+			quit = { "q", "<ESC>" },
+			close_in_preview = "<ESC>",
+		},
+	},
+
+	definition = {
+		edit = "<CR>",
+		vsplit = "<C-c>v",
+		split = "<C-c>i",
+		tabe = "<C-c>t",
+		quit = "q",
+	},
 })
