@@ -37,9 +37,11 @@ M.lspconfig = {
 
 		["gf"] = { "<cmd>Lspsaga lsp_finder<CR>", "show definition, references" },
 
-		["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "lsp declaration" },
+		["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "lsp peek declaration" },
 
-		["gt"] = { "<cmd>Lspsaga goto_definition<CR>", "lsp declaration" },
+		["gt"] = { "<cmd>Lspsaga goto_definition<CR>", "lsp goto declaration" },
+
+		["gl"] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "lsp goto declaration" },
 
 		["<leader>ca"] = { "<cmd>Lspsaga code_action<CR>", "lsp code actions" },
 
