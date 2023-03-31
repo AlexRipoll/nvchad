@@ -81,24 +81,17 @@ M.telescope = {
 	},
 }
 
-M.nvterm = {
-	t = {
-		-- toggle in terminal mode
-		["<C-t>"] = {
-			function()
-				require("nvterm.terminal").toggle("float")
-			end,
-			"toggle floating term",
-		},
+M.toggleterm = {
+	n = {
+		["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+		["<leader>th"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
+		["<leader>tv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
 	},
 
-	n = {
-		["<C-t>"] = {
-			function()
-				require("nvterm.terminal").toggle("float")
-			end,
-			"toggle floating term",
-		},
+	t = {
+		["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+		["<leader>th"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
+		["<leader>tv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
 	},
 }
 
