@@ -43,6 +43,16 @@ local plugins = {
 		opts = overrides.telescope,
 	},
 
+	{
+		"numToStr/Comment.nvim",
+		-- keys = { "gc", "gb" },
+		init = require("core.utils").load_mappings("comment"),
+		config = function()
+			require("Comment").setup()
+		end,
+		lazy = false,
+	},
+
 	-- Install a plugin
 	{
 		"max397574/better-escape.nvim",
@@ -76,6 +86,11 @@ local plugins = {
 		config = function()
 			require("custom.configs.toggleterm")
 		end,
+	},
+
+	{
+		"RRethy/vim-illuminate",
+		lazy = false,
 	},
 
 	-- To make a plugin not be loaded

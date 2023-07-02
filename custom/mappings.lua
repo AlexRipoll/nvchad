@@ -83,15 +83,15 @@ M.telescope = {
 
 M.toggleterm = {
 	n = {
-		["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		["<leader>th"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
-		["<leader>tv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
+		["<leader>ttf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+		["<leader>tth"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
+		["<leader>ttv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
 	},
 
 	t = {
-		["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		["<leader>th"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
-		["<leader>tv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
+		["<leader>ttf"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+		["<leader>tth"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "Horixontal" },
+		["<leader>ttv"] = { "<cmd>ToggleTerm direction=vertical<cr>", "Vertical" },
 	},
 }
 
@@ -130,6 +130,16 @@ M.gitsigns = {
 				require("gitsigns").reset_buffer()
 			end,
 			"Toggle deleted",
+		},
+	},
+}
+
+M.illuminate = {
+	n = {
+		["<a-n>"] = { "<cmd>lua require('illuminate').next_reference{wrap=true}<cr>", "go to next reference" },
+		["<a-p>"] = {
+			"<cmd>lua require('illuminate').next_reference{reverse=true,wrap=true}<cr>",
+			"go to previous reference",
 		},
 	},
 }
